@@ -15,13 +15,13 @@ class Form extends React.Component {
   };
 
   submitIdea = (event) => {
-    event.preventDefault(); // prevents the page from refreshing when the form submits
+    event.preventDefault();
     const newIdea = {
       id: Date.now(),
-      ...this.state, // spreading in the title and description
+      ...this.state,
     };
-    this.props.addIdea(newIdea); // using the addIdea method from App that we passed as a prop to Form
-    this.clearInputs(); // invoking the method I wrote below to reset the inputs
+    this.props.addIdea(newIdea);
+    this.clearInputs();
   };
 
   clearInputs = () => {
